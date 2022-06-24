@@ -1,3 +1,6 @@
+#Error en Output con tipo numerico
+La razon de que se no se podia hacer correctamente el ejercicio en mi maquina, fue un error de sintaxis que Visual Studio Code no detecto, el cual no permitia que el @Output de tipo numero se emitiera correctamente, el error ya esta solucionado en el codigo actual... pero en la siguiente sesion les explico el error que me sucedio para que tengan cuiado y no les pase igual
+
 # AppCourseNg
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
