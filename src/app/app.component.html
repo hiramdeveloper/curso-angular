@@ -1,0 +1,12 @@
+<h1>Hola mundo</h1>
+<p>Title: {{title}}</p>
+<div>
+  <app-typescript
+    [titulo]="title"
+    (tituloModificado)="getTituloModificado($event)"
+    (retornaNumero)="getRetonaNumero($event)">
+  </app-typescript>
+</div>
+
+
+<router-outlet></router-outlet>

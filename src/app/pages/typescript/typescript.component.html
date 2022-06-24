@@ -1,0 +1,13 @@
+<!-- <p>El componente tiene el titulo de: {{titulo}}</p> -->
+<p>Componente Hijo</p>
+<input
+    type="text"
+    name="titulo"
+    [(ngModel)]="titulo"
+    (ngModelChange)="handleTitleChange($event)">
+
+<input
+    type="number"
+    name="numero"
+    [(ngModel)]="numero"
+    (ngModelChange)="handleNumeroCambiado($event)">
