@@ -5,7 +5,7 @@ import { PersonaComponent } from '../app/pages/persona/persona.component';
 import { MascotasComponent } from './pages/mascotas/mascotas.component';
 
 const routes: Routes = [
-    { path: 'persona', component: PersonaComponent },
+    { path: 'persona/:id', component: PersonaComponent },
     { path: 'mascotas', component: MascotasComponent }
 ];
 

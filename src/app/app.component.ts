@@ -34,11 +34,15 @@ export class AppComponent implements OnInit {
 
   getTituloModificado(titulo: string) {
     console.log(titulo);
-    // this.title = titulo;
+    this.title = titulo;
   }
 
   getRetonaNumero(numero: number) {
     console.log(numero);
+  }
+
+  handleClickEvent() {
+    alert('Hiciste dado click');
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-persona',
@@ -7,9 +8,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class PersonaComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  constructor(private router: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.router.snapshot.params['id'];
+    console.log(this.router.snapshot.params['id']);
     console.log('Persona inicia');
   }
 

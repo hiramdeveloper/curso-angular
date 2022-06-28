@@ -8,5 +8,12 @@
   </app-typescript>
 </div>
 
+<button type="button" (click)="handleClickEvent()">Click Me!</button>
+<p (mouseover)="handleClickEvent()">Hola mundo Peru!</p>
+
+
+<p>{{ '2022-01-01' | date:'full' }}</p>
+<p>{{ 50000 | currency }}</p>
+
 
 <router-outlet></router-outlet>
