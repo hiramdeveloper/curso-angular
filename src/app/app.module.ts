@@ -7,13 +7,15 @@ import { TypescriptComponent } from './pages/typescript/typescript.component';
 import { PersonaComponent } from './pages/persona/persona.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MascotasComponent } from './pages/mascotas/mascotas.component';
+import { PaisesPipe } from './pipes/paises.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TypescriptComponent,
     PersonaComponent,
-    MascotasComponent
+    MascotasComponent,
+    PaisesPipe
   ],
   imports: [
     BrowserModule,
