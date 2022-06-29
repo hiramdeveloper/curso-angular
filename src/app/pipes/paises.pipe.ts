@@ -5,13 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PaisesPipe implements PipeTransform {
 
-  transform(value: string, ...args: any): unknown {
+  transform(value: string, args: string[]): unknown {
     console.log(value);
-    console.log(args[0]);
+    console.log(args[0][0]);
     let pais = '';
-    if (args[0] === 'P') {
+    if (args[0][0] === 'P') {
       pais = 'Peru';
-    } else if (args[0] === 'M') {
+    } else if (args[0][0] === 'M') {
       pais = 'Mexico';
     }
 

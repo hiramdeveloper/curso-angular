@@ -12,11 +12,11 @@
 <p (mouseover)="handleClickEvent()">Hola mundo Peru!</p>
 
 
-<p>{{ '2022-01-01' | date:'full' }}</p>
+<p>{{ '2022-01-01' | date:'full' | lowercase }}</p>
 <p>{{ 50000 | currency }}</p>
 
-<p>{{ 'Hola desde' | paises: 'P' }}</p>
-<p>{{ 'Hola desde' | paises: 'M' }}</p>
+<p>{{ 'hola desde P' | uppercase | paises: ['P'] }}</p>
+<p>{{ 'Hola desde M' | paises: ['M'] }}</p>
 
 <p>{{ 'Hola desde' | uppercase }}</p>
 <p>{{ 'HOLA DESDE' | lowercase }}</p>
