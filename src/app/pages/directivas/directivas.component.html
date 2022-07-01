@@ -1,0 +1,50 @@
+<!-- <p>directivas works!</p> -->
+<!-- <img src="https://miro.medium.com/max/480/1*VKY-Ldkt-iHobItql7G_5w.png" appNotImage /> -->
+<!-- <p appBackgroundColor>Curso Angular</p>
+
+<input type="text" [(ngModel)]="modelo">
+<p>{{ modelo }}</p> -->
+
+<!-- <div *ngIf="show">
+ <p>Angular</p>
+</div> -->
+
+
+<!-- <div [ngClass]="{
+    'border': show,
+    'color': !show
+}" [ngStyle]="{
+    'font-size': show ? '50px' : '30px'
+}">Clases usando ngClass</div> -->
+
+
+
+<!-- <ng-container *ngIf="show; then divONE; else divTWO"></ng-container>
+<ng-template #divONE>
+    <div>Div ONE</div>
+</ng-template>
+<ng-template #divTWO>
+    <div>Div TWO</div>
+</ng-template> -->
+
+<!-- <button type="button" [disabled]="show" (click)="handleDisabled()">Click me</button>
+<br><br>
+<button type="button" (click)="handleShow()">Toggle</button> -->
+
+<h3>Lista usando *ngFor</h3>
+<ul>
+    <li *ngFor="let person of people">{{ person.name }} - {{ person.country }}</li>
+</ul>
+
+<h3>Lista usando *ngSwitch</h3>
+<ul *ngFor="let person of people" [ngSwitch]="person.country">
+    
+    <!-- <li class="success" *ngSwitchCase="'MARS'">{{ person.name }} - {{ person.country }}</li> -->
+    <li class="warning" *ngSwitchCase="'USA'">{{ person.name }} - {{ person.country }}</li>
+    <li class="danger" *ngSwitchCase="'HK'">{{ person.name }} - {{ person.country }}</li>
+    <!-- <li class="info" *ngSwitchCase="'UK'">{{ person.name }} - {{ person.country }}</li> -->
+
+    <!-- <li class="secondary" *ngSwitchDefault>{{ person.name }} - {{ person.country }}</li> -->
+
+
+</ul>

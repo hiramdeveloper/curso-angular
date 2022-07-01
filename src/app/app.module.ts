@@ -8,6 +8,9 @@ import { PersonaComponent } from './pages/persona/persona.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MascotasComponent } from './pages/mascotas/mascotas.component';
 import { PaisesPipe } from './pipes/paises.pipe';
+import { DirectivasComponent } from './pages/directivas/directivas.component';
+import { NotImageDirective } from './directives/notImage/not-image.directive';
+import { BackgroundColorDirective } from './directives/backgroundColor/background-color.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { PaisesPipe } from './pipes/paises.pipe';
     TypescriptComponent,
     PersonaComponent,
     MascotasComponent,
-    PaisesPipe
+    PaisesPipe,
+    DirectivasComponent,
+    NotImageDirective,
+    BackgroundColorDirective
   ],
   imports: [
     BrowserModule,

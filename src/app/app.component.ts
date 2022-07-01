@@ -20,12 +20,13 @@ export class AppComponent implements OnInit {
     edad: 0,
     esMayor: false
   };
+  letra = 'P';
 
   constructor() {}
 
   ngOnInit(): void {
-    console.log('ngOnInit lanzado!');
-    console.log(this.suma(1, 3));
+    // console.log('ngOnInit lanzado!');
+    // console.log(this.suma(1, 3));
   }
 
   suma(num1: number, num2: number): number {
@@ -33,16 +34,17 @@ export class AppComponent implements OnInit {
   }
 
   getTituloModificado(titulo: string) {
-    console.log(titulo);
-    this.title = titulo;
+    // console.log(titulo);
+    // this.title = titulo;
+    this.letra = titulo;
   }
 
   getRetonaNumero(numero: number) {
-    console.log(numero);
+    // console.log(numero);
   }
 
   handleClickEvent() {
-    alert('Hiciste dado click');
+    // console.log('Hiciste dado click');
   }
 
 }
