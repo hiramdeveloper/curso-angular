@@ -9,8 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { MascotasComponent } from './pages/mascotas/mascotas.component';
 import { PaisesPipe } from './pipes/paises.pipe';
 import { DirectivasComponent } from './pages/directivas/directivas.component';
-import { NotImageDirective } from './directives/notImage/not-image.directive';
-import { BackgroundColorDirective } from './directives/backgroundColor/background-color.directive';
 
 @NgModule({
   declarations: [
@@ -20,8 +18,6 @@ import { BackgroundColorDirective } from './directives/backgroundColor/backgroun
     MascotasComponent,
     PaisesPipe,
     DirectivasComponent,
-    NotImageDirective,
-    BackgroundColorDirective
   ],
   imports: [
     BrowserModule,

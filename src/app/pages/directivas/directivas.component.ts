@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PersonaService } from '../../services/persona/persona.service';
+
 @Component({
   selector: 'app-directivas',
   templateUrl: './directivas.component.html',
@@ -9,6 +11,7 @@ export class DirectivasComponent implements OnInit {
 
   modelo = '';
   show = true;
+  personas: string[] = [];
 
   people: any[] = [
     {
@@ -37,9 +40,11 @@ export class DirectivasComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private personaService: PersonaService) { }
 
   ngOnInit(): void {
+    this.personas = this.personaService.getPersonas();
+    console.log(this.personas);
   }
 
   handleShow() {
