@@ -12,4 +12,11 @@ export class PersonaService {
       'Hiram', 'Pedro', 'Juan', 'Pablo'
     ]
   }
+
+  // [
+  //   {
+  //     name: ''
+  //     status: true
+  //   }
+  // ]
 }

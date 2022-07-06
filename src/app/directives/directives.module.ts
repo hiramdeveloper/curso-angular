@@ -9,6 +9,9 @@ import { NotImageDirective } from './notImage/not-image.directive';
         NotImageDirective
     ],
     imports: [],
-    exports: []
+    exports: [
+        BackgroundColorDirective,
+        NotImageDirective
+    ]
 })
 export class DirectivesModule {}

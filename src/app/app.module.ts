@@ -2,27 +2,27 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
+import { PagesModule } from './pages/pages.module';
+
 import { AppComponent } from './app.component';
-import { TypescriptComponent } from './pages/typescript/typescript.component';
-import { PersonaComponent } from './pages/persona/persona.component';
 import { AppRoutingModule } from './app-routing.module';
-import { MascotasComponent } from './pages/mascotas/mascotas.component';
 import { PaisesPipe } from './pipes/paises.pipe';
-import { DirectivasComponent } from './pages/directivas/directivas.component';
+import { DirectivesModule } from './directives/directives.module';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TypescriptComponent,
-    PersonaComponent,
-    MascotasComponent,
-    PaisesPipe,
-    DirectivasComponent,
+    PaisesPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    DirectivesModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
