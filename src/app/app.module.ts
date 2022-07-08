@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PaisesPipe } from './pipes/paises.pipe';
 import { DirectivesModule } from './directives/directives.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HeaderInterceptor } from './interceptors/header.interceptor';
 
 
 
@@ -24,7 +26,13 @@ import { DirectivesModule } from './directives/directives.module';
     DirectivesModule,
     PagesModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HeaderInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

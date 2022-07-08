@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUser } from 'src/app/shared/interfaces/users';
 import { UsersService } from '../../services/users/users.service';
 
 @Component({
@@ -8,16 +9,57 @@ import { UsersService } from '../../services/users/users.service';
 })
 export class UsersComponent implements OnInit {
 
+  usuarios: any[] = [];
+  name = '';
+  age = '';
+  ocupation = '';
+  userId = '';
+
   constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
-    this.usersService.getUsers().subscribe({
-      next: (users: any) => console.log(users)
-    });
+    this.getUsers();
 
     this.usersService.getCustomers().subscribe({
       next: (customers: any) => console.log(customers)
     });
+  }
+
+  getUsers() {
+    this.usersService.getUsers().subscribe({
+      next: (users: any) => {
+        console.log(users);
+        this.usuarios = users;
+      }
+    });
+  }
+
+  sendData() {
+    this.usersService.addUser(this.name, this.age, this.ocupation).subscribe({
+      next: (response: any) => {
+        console.log(response);
+        this.usuarios.push(response);
+      }
+    });
+  }
+
+  removeUser(usario: IUser) {
+    console.log(usario);
+    this.usersService.deleteUser(usario.id).subscribe({
+      next: (response: any) => this.getUsers()
+    });
+  }
+
+  searchByUserId() {
+    console.log(this.userId);
+    this.usersService.getUserById(this.userId).subscribe({
+      next: (user: any) => console.log(user),
+      error: (error: any) => this.otraBusqueda(this.userId)
+    });
+  }
+
+  otraBusqueda(userId: string) {
+    alert(`Ejecuta otra busqueda con el id de usuario ${userId}`);
   }
 
 }

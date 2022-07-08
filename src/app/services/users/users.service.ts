@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 
 @Injectable({
@@ -12,22 +12,22 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   getUsers() {
-    const token = 'fgkjhasdkjfklajsdhkfja';
-    const headers = new HttpHeaders({
-      Accept: 'application/json',
-      HeaderPersonalizado: 'Hola mundo',
-      Authorization: `Bearer: ${token}`
-    });
-    return this.http.get(`${this.baseUrl}/users`, {headers});
+    return this.http.get(`${this.baseUrl}/users`);
   }
 
   getCustomers() {
-    const token = 'fgkjhasdkjfklajsdhkfja';
-    const headers = new HttpHeaders({
-      Accept: 'application/json',
-      HeaderPersonalizado: 'Hola mundo',
-      Authorization: `Bearer: ${token}`
-    });
-    return this.http.get(`${this.baseUrl}/customers`, {headers});
+    return this.http.get(`${this.baseUrl}/customers`);
+  }
+
+  addUser(name: string, age: string, ocupation: string) {
+    return this.http.post(`${this.baseUrl}/users`, {name, age, ocupation});
+  }
+
+  deleteUser(userId: string) {
+    return this.http.delete(`${this.baseUrl}/users/${userId}`);
+  }
+
+  getUserById(userId: string) {
+    return this.http.get(`${this.baseUrl}/users/${userId}`);
   }
 }
