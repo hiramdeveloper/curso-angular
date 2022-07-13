@@ -8,6 +8,10 @@ import { MascotasComponent } from './mascotas/mascotas.component';
 import { PersonaComponent } from './persona/persona.component';
 import { TypescriptComponent } from './typescript/typescript.component';
 import { UsersComponent } from './users/users.component';
+import { SincronoComponent } from './temario-siete/sincrono/sincrono.component';
+import { AsincronoComponent } from './temario-siete/asincrono/asincrono.component';
+import { PromesasComponent } from './temario-siete/promesas/promesas.component';
+import { RxjsComponent } from './temario-siete/rxjs/rxjs.component';
 
 @NgModule({
     declarations: [
@@ -15,13 +19,23 @@ import { UsersComponent } from './users/users.component';
         MascotasComponent,
         PersonaComponent,
         TypescriptComponent,
-        UsersComponent
+        UsersComponent,
+        SincronoComponent,
+        AsincronoComponent,
+        PromesasComponent,
+        RxjsComponent
     ],
     imports: [
         CommonModule,
         FormsModule,
         HttpClientModule
     ],
-    exports: [UsersComponent]
+    exports: [
+        UsersComponent, 
+        SincronoComponent,
+        AsincronoComponent,
+        PromesasComponent,
+        RxjsComponent
+    ]
 })
 export class PagesModule { }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { IUser } from 'src/app/shared/interfaces/users';
 import { UsersService } from '../../services/users/users.service';
 
@@ -7,7 +8,8 @@ import { UsersService } from '../../services/users/users.service';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
-export class UsersComponent implements OnInit {
+export class UsersComponent implements OnInit, OnDestroy {
+  subscription = new Subscription();
 
   usuarios: any[] = [];
   name = '';
@@ -20,18 +22,26 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
     this.getUsers();
 
-    this.usersService.getCustomers().subscribe({
-      next: (customers: any) => console.log(customers)
-    });
+    this.subscription.add(
+      this.usersService.getCustomers().subscribe({
+        next: (customers: any) => console.log(customers)
+      })
+    );
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   getUsers() {
-    this.usersService.getUsers().subscribe({
-      next: (users: any) => {
-        console.log(users);
-        this.usuarios = users;
-      }
-    });
+    this.subscription.add(
+      this.usersService.getUsers().subscribe({
+        next: (users: any) => {
+          console.log(users);
+          this.usuarios = users;
+        }
+      })
+    );
   }
 
   sendData() {
