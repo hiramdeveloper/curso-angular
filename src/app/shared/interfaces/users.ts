@@ -3,4 +3,5 @@ export interface IUser {
     name: string;
     age: string;
     ocupation: string;
+    address?: string
 }

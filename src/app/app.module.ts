@@ -10,6 +10,7 @@ import { PaisesPipe } from './pipes/paises.pipe';
 import { DirectivesModule } from './directives/directives.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HeaderInterceptor } from './interceptors/header.interceptor';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -17,7 +18,8 @@ import { HeaderInterceptor } from './interceptors/header.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
-    PaisesPipe
+    PaisesPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { PersonaComponent } from '../app/pages/persona/persona.component';
-import { MascotasComponent } from './pages/mascotas/mascotas.component';
+import { HomeComponent } from './home/home.component';
+import { PagesRoutingModule } from './pages/pages.routing.module';
 
 const routes: Routes = [
-    { path: 'persona/:id', component: PersonaComponent },
-    { path: 'mascotas', component: MascotasComponent }
+    { path: 'home', component: HomeComponent },
+    {
+        path: 'pages',
+        loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
+    },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, {useHash: true})],
+    imports: [
+        RouterModule.forRoot(routes, {useHash: true}),
+        PagesRoutingModule
+    ],
     exports: [RouterModule]
 })
 export class AppRoutingModule {}
