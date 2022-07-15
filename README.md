@@ -1,7 +1,7 @@
 ## Error con Lazy loading
 El error se debio a que cuando hice el componente de PagesComponent si ustedes recuerdan cuando lo cree me salio un error el cual decia que para poder crear dicho componente debia de ejecutar el comando como siempre pero de la siguiente manera: ng g c pages/pages --skip-import, entonces eso no hace el auto-import en el modulo... lo cual con todo lo que genero la perdida del internet por causa de la lluvia hizo que perdiera la concentracion, les pido una disculpa nuevamente.
 
-#Error en Output con tipo numerico
+## Error en Output con tipo numerico
 La razon de que se no se podia hacer correctamente el ejercicio en mi maquina, fue un error de sintaxis que Visual Studio Code no detecto, el cual no permitia que el @Output de tipo numero se emitiera correctamente, el error ya esta solucionado en el codigo actual... pero en la siguiente sesion les explico el error que me sucedio para que tengan cuiado y no les pase igual
 
 # AppCourseNg
