@@ -9,6 +9,8 @@ import { TypescriptComponent } from './typescript/typescript.component';
 import { 
     AuthGuardService as AuthGuard 
 } from '../auth/services/auth-guard.service';
+import { FormularioSimpleComponent } from './temario-diez/formulario-simple/formulario-simple.component';
+import { FormularioReactivoComponent } from './temario-diez/formulario-reactivo/formulario-reactivo.component';
 
 const routes: Routes = [
     {
@@ -18,7 +20,9 @@ const routes: Routes = [
         children: [
             { path: '', component: AccesibilidadComponent },
             { path: 'mascotas', component: MascotasComponent },
-            { path: 'typescript', component: TypescriptComponent }
+            { path: 'typescript', component: TypescriptComponent },
+            { path: 'formulario-simple', component: FormularioSimpleComponent },
+            { path: 'formulario-reactivo', component: FormularioReactivoComponent }
         ]
     }
 ];

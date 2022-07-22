@@ -1,0 +1,13 @@
+<p>Formulario-simple!</p>
+
+
+<label>Bucar</label>
+<input type="text" name="search" [(ngModel)]="search" (ngModelChange)="handleChange($event)"><br><br>
+<div *ngIf="!search">
+    <span>Este campo es obligatorio para la busqueda</span>
+</div>
+<br>
+
+
+
+<button type="button" (click)="handleSearch()">Buscar</button>

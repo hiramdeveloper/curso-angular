@@ -1,0 +1,43 @@
+<p>Formulario-reactivo!</p>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label>Nombre</label><br>
+    <input type="text" name="name" formControlName="name"><br><br>
+
+    <label>Apellido</label><br>
+    <input type="text" name="lastName" formControlName="lastName"><br>
+    <div 
+        *ngIf="!!userForm.controls['lastName'].errors &&
+        userForm.controls['lastName'].errors['required'] &&
+        userForm.controls['lastName'].touched">
+        <span>El campo apellido es requierido!</span>
+    </div>
+    <br><br>
+
+    <label>Edad</label><br>
+    <input type="number" name="age" formControlName="age"><br>
+    <button type="button" (click)="isValidAge()">Validar edad</button>
+    <br><br>
+
+    <label>Email</label><br>
+    <input type="text" name="email" formControlName="email"><br>
+    <div *ngIf="!!userForm.controls['email'].errors && userForm.controls['email'].touched">
+        <div *ngIf="userForm.controls['email'].errors['required']">
+            <span>El campo de email es requierido</span>
+        </div>
+        <div *ngIf="userForm.controls['email'].errors['email']">
+            <span>El email no tiene el formato correcto!</span>
+        </div>
+    </div>
+    <br><br>
+
+    <label>Confirmar Email</label><br>
+    <input type="text" name="confirmarEmail" formControlName="confirmEmail"><br>
+    <div *ngIf="!!userForm.errors && userForm.errors['valuesNotMatch']">
+        <span>Los campos de email no son iguales</span>
+    </div>
+    <br><br>
+
+    <button type="submit">Enviar</button>
+</form>
+

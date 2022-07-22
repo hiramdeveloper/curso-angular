@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -15,6 +15,8 @@ import { PromesasComponent } from './temario-siete/promesas/promesas.component';
 import { RxjsComponent } from './temario-siete/rxjs/rxjs.component';
 import { AccesibilidadComponent } from './temario-ocho/accesibilidad/accesibilidad.component';
 import { PagesComponent } from './pages.component';
+import { FormularioSimpleComponent } from './temario-diez/formulario-simple/formulario-simple.component';
+import { FormularioReactivoComponent } from './temario-diez/formulario-reactivo/formulario-reactivo.component';
 
 @NgModule({
     declarations: [
@@ -28,13 +30,16 @@ import { PagesComponent } from './pages.component';
         PromesasComponent,
         RxjsComponent,
         AccesibilidadComponent,
-        PagesComponent
+        PagesComponent,
+        FormularioSimpleComponent,
+        FormularioReactivoComponent
     ],
     imports: [
         CommonModule,
         FormsModule,
         HttpClientModule,
-        RouterModule
+        RouterModule,
+        ReactiveFormsModule
     ],
     exports: [
         UsersComponent, 
