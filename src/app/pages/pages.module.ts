@@ -17,6 +17,12 @@ import { AccesibilidadComponent } from './temario-ocho/accesibilidad/accesibilid
 import { PagesComponent } from './pages.component';
 import { FormularioSimpleComponent } from './temario-diez/formulario-simple/formulario-simple.component';
 import { FormularioReactivoComponent } from './temario-diez/formulario-reactivo/formulario-reactivo.component';
+import { ProductsComponent } from './material/products/products.component';
+
+// Angular Material
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
     declarations: [
@@ -32,14 +38,18 @@ import { FormularioReactivoComponent } from './temario-diez/formulario-reactivo/
         AccesibilidadComponent,
         PagesComponent,
         FormularioSimpleComponent,
-        FormularioReactivoComponent
+        FormularioReactivoComponent,
+        ProductsComponent
     ],
     imports: [
         CommonModule,
         FormsModule,
         HttpClientModule,
         RouterModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatToolbarModule,
+        MatCardModule,
+        MatButtonModule
     ],
     exports: [
         UsersComponent, 

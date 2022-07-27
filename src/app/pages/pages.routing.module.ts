@@ -11,6 +11,7 @@ import {
 } from '../auth/services/auth-guard.service';
 import { FormularioSimpleComponent } from './temario-diez/formulario-simple/formulario-simple.component';
 import { FormularioReactivoComponent } from './temario-diez/formulario-reactivo/formulario-reactivo.component';
+import { ProductsComponent } from './material/products/products.component';
 
 const routes: Routes = [
     {
@@ -22,7 +23,8 @@ const routes: Routes = [
             { path: 'mascotas', component: MascotasComponent },
             { path: 'typescript', component: TypescriptComponent },
             { path: 'formulario-simple', component: FormularioSimpleComponent },
-            { path: 'formulario-reactivo', component: FormularioReactivoComponent }
+            { path: 'formulario-reactivo', component: FormularioReactivoComponent },
+            { path: 'products', component: ProductsComponent }
         ]
     }
 ];
